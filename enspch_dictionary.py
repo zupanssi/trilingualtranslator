@@ -9,47 +9,33 @@ candy,golosina,糖果
 '''
 with open('enspch_dic.csv','r') as ite:
     dicc = csv.reader(ite)
-    def extract_en2sp(n, r):
-        while n < r:
-            next(dicc)
-            n = n + 1
-        for line in dicc:
-            print(line[1])
-            break
-
-    def extract_en2ch(n = 0, r = 0):
-        while n < r:
-            next(dicc)
-            n = n + 1
-        for line in dicc:
-            print(line[2])
-            break
+    rowList = list(dicc)
         
     def en2sp():
         user_word = input('enter word: ')
-        if user_word == 'bathroom':
-            extract_en2sp(0,1)
-        elif user_word == 'rent':
-            extract_en2sp(0,2)
-        elif user_word == 'sound':
-            extract_en2sp(0,3)
-        elif user_word == 'chocolate':
-            extract_en2sp(0,4)
-        elif user_word == 'candy':
-            extract_en2sp(0,5)
+        if user_word == rowList[1][0]:
+            print(rowList[1][1])
+        if user_word == rowList[2][0]:
+            print(rowList[2][1])
+        if user_word == rowList[3][0]:
+            print(rowList[3][1])
+        if user_word == rowList[4][0]:
+            print(rowList[4][1])
+        if user_word == rowList[5][0]:
+            print(rowList[5][1])
 
     def en2ch():
         user_word = input('enter word: ')
-        if user_word == 'bathroom':
-            extract_en2ch(0,1)
-        elif user_word == 'rent':
-            extract_en2ch(0,2)
-        elif user_word == 'sound':
-            extract_en2ch(0,3)
-        elif user_word == 'chocolate':
-            extract_en2ch(0,4)
-        elif user_word == 'candy':
-            extract_en2ch(0,5)
+        if user_word == rowList[1][0]:
+            print(rowList[1][2])
+        if user_word == rowList[2][0]:
+            print(rowList[2][2])
+        if user_word == rowList[3][0]:
+            print(rowList[3][2])
+        if user_word == rowList[4][0]:
+            print(rowList[4][2])
+        if user_word == rowList[5][0]:
+            print(rowList[5][2])
 
     mode = input(
         '''
